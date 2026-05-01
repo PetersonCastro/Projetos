@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CursoEmVideo</title>
+    <link rel="stylesheet" href="ex004.css">
+</head>
+<body>
+    <h1>Análise de Nome e Formatação de Números</h1>
+
+    <script>
+    //Solicitando o nome do usuário
+        var nome = window.prompt("Digite o seu nome:");
+
+//Exibindo o nome e a quantidade de letras (length)
+        document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras.<br><hr>`);
+
+//Exibindo o nome com as letras maiúsculas (toUpperCase)
+        document.write(` O seu nome em maiúsculas é ${nome.toUpperCase()}.<br><hr>`);
+        
+//Exibindo o nome com as letras minúsculas (toLowerCase)
+        document.write(` O seu nome em minúsculas é ${nome.toLowerCase()}.<br><hr>`);
+
+//Formatar Números(toFixed, replace, toLocaleString) Erro: toLocaleString não funciona no navegador, apenas em Node.js
+        var numero = 1234.5
+        numero = numero.toFixed(2);
+        numero = numero.replace(".", ",");
+        numero = numero.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        
+        document.write(`<h1>O número formatado é: ${numero}.</h1>`);
+
+
+    </script>
+</body>
+</html>
